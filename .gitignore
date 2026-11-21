@@ -221,3 +221,8 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# VisionReader local data and model weights
+data/
+models/*.pth
+models/*.pt
