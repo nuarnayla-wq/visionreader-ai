@@ -14,7 +14,7 @@ def load_reader():
 uploaded = st.file_uploader("Pilih gambar", type=["png", "jpg", "jpeg"])
 if uploaded:
     image = Image.open(uploaded).convert("RGB")
-    st.image(image, caption="Gambar pilihan", use_container_width=True)
+    st.image(image, caption="Gambar pilihan", use_column_width=True)
     with st.spinner("Menganalisis gambar..."):
         try:
             reader = load_reader()
