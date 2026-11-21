@@ -82,3 +82,14 @@ Gambar diproses secara lokal di komputer Anda oleh aplikasi ini. Jangan mengungg
 
 ## Lisensi
 MIT
+
+
+## Deteksi dan menghitung objek
+
+Aplikasi juga memakai MobileNet-SSD melalui OpenCV DNN untuk mendeteksi objek dan menghitung jumlah tiap kategori. Pada penggunaan pertama, file model diunduh otomatis ke `models/detection/` (memerlukan internet). Model ini mengenali 20 kategori Pascal VOC, bukan semua benda di dunia. Objek kecil, tertutup, atau kategori di luar daftar dapat terlewat. Model deteksi berasal dari [chuanqi305/MobileNet-SSD](https://github.com/chuanqi305/MobileNet-SSD), dilatih pada VOC0712.
+
+Instal dependensi tambahan jika memperbarui proyek lama:
+
+```powershell
+python -m pip install opencv-python-headless==4.10.0.84
+```
